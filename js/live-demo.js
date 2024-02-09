@@ -9,10 +9,12 @@ async function appInit() {
 	store = Object.values(toDos).map((obj)=> {
         return toDoItemTemplate(obj)
     })
-    
-    const container = document.createElement('div');
-    store.forEach(markup => container.appendChild(markup))
 
+    const container = document.createElement('div');
+    container.classList.add("max-w-80");
+    const store10 = store.splice(0,10)
+    store10.forEach(markup => container.appendChild(markup))
+ 
     document.querySelector('#root').insertAdjacentElement('beforeend', container)
 }
 
