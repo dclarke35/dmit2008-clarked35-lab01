@@ -11,7 +11,7 @@ async function appInit() {
     })
 
     const container = document.createElement('div');
-    container.classList.add("max-w-80");
+
     const store10 = store.splice(0,10)
     store10.forEach(markup => container.appendChild(markup))
  
